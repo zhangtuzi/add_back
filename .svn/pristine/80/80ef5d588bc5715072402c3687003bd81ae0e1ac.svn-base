@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>网厅banner配置</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bannerAbout.css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+  </head>
+  <body>
+      <div class="bannerHeaerDiv">
+        <ul class="headerUl">
+          <li onclick="window.location.href='llBbanner.html'">流量包专区banner广告</li>
+          <li class="active1" onclick="window.location.href='G4banner.html'">特色专区banner广告</li>
+          <li onclick="window.location.href='thbanner.html'">特惠专区banner广告</li>
+        </ul>
+      </div>
+      <img src="images/G4Bg.jpg" class="pageBg marginT47">
+      <div class="mc1"></div>
+      <div class="bannerWarp">
+        <ul class="bannerUl1">
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner1.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner2.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner3.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner4.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner1.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner2.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner3.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner4.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner1.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner2.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner3.jpg" class="bannerPic">
+          </li>
+          <li>
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <img src="images/banner4.jpg" class="bannerPic">
+          </li>
+        </ul>
+        <ul class="bannerCzUl">
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber showAll1">1</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">2</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">3</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">4</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">5</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">6</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">7</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">8</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">9</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">10</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">11</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+          <li class="bannerIndexLi">
+            <div class="bannerIndexNumber">12</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+            <div class="leftMoveBanner" title="左移">
+                <img src="images/leftMoveIcon.png" class="MoveBannerPic">
+            </div>
+            <div class="rightMoveBanner" title="右移">
+                <img src="images/rightMoveIcon.png" class="MoveBannerPic">
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <script type="text/javascript" src="js/bannerAbout.js"></script>
+  </body>
+</html>

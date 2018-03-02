@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>网厅楼层广告配置</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bannerAbout.css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+  </head>
+  <body>
+    <img src="images/thBgTop.jpg" class="pageBg">
+    <div class="bannerDivShade"></div>
+    <img src="images/thBgFoot.jpg" class="pageBg2">
+    <div class="mc1"></div>
+    <div class="floorAdWarp">
+        <ul class="floorAdUl">
+            <li class="floorAdLi floorLocked">
+                <img src="images/thProPic1.jpg" class="floorAdPic">
+                <div class="floorAdMc"></div>
+                <div class="floorActiveDiv"></div>
+                <img src="images/lockedIcon3.png" class="floorAdLockShow" title="已锁定">
+                <img src="images/closeIcon2.png" class="floorAdDelIcon">
+                <div class="floorAdCzDiv">
+                  <table class="floorAdCz" cellspacing="5" border-collapse="inherit">
+                    <tr class="floorAdUp" title="上移">
+                      <td>
+                        <img src="images/upMoveIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdEdite" title="编辑">
+                      <td>
+                        <img src="images/editIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdLocked dn" title="锁定">
+                      <td>
+                        <img src="images/lockIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdUnLock" title="解锁">
+                      <td>
+                        <img src="images/unLockIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdDown" title="下移">
+                      <td>
+                        <img src="images/downMoveIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+            </li>
+            <li class="floorAdLi floorLocked">
+                <img src="images/thProPic2.jpg" class="floorAdPic">
+                <div class="floorAdMc"></div>
+                <div class="floorActiveDiv"></div>
+                <img src="images/lockedIcon3.png" class="floorAdLockShow" title="已锁定">
+                <img src="images/closeIcon2.png" class="floorAdDelIcon">
+                <div class="floorAdCzDiv">
+                  <table class="floorAdCz" cellspacing="5" border-collapse="inherit">
+                    <tr class="floorAdUp" title="上移">
+                      <td>
+                        <img src="images/upMoveIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdEdite" title="编辑">
+                      <td>
+                        <img src="images/editIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdLocked dn" title="锁定">
+                      <td>
+                        <img src="images/lockIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdUnLock" title="解锁">
+                      <td>
+                        <img src="images/unLockIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdDown" title="下移">
+                      <td>
+                        <img src="images/downMoveIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+            </li>
+            <li class="floorAdLi">
+                <img src="images/thProPic3.jpg" class="floorAdPic">
+                <div class="floorAdMc dn"></div>
+                <div class="floorActiveDiv"></div>
+                <img src="images/lockedIcon3.png" class="floorAdLockShow dn" title="已锁定">
+                <img src="images/closeIcon2.png" class="floorAdDelIcon">
+                <div class="floorAdCzDiv">
+                  <table class="floorAdCz" cellspacing="5" border-collapse="inherit">
+                    <tr class="floorAdUp" title="上移">
+                      <td>
+                        <img src="images/upMoveIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdEdite" title="编辑">
+                      <td>
+                        <img src="images/editIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdLocked" title="锁定">
+                      <td>
+                        <img src="images/lockIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdUnLock dn" title="解锁">
+                      <td>
+                        <img src="images/unLockIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                    <tr class="floorAdDown" title="下移">
+                      <td>
+                        <img src="images/downMoveIcon2.png" class="floorAdCzBtn">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+            </li>
+            <li class="floorAdAddLi">
+                <img src="images/addIcon2.png" class="floorAdAddBtn" title="添加广告">
+            </li>
+        </ul>
+    </div>
+    <div class="tcMc"></div>
+    <div class="floorTc">
+        <p class="floorTcTip1">是否确认删除广告位？</p>
+        <div class="floorTcBtnDiv">
+            <div class="floorTcBtn delConfrimBtn fl">确认</div>
+            <div class="floorTcBtn delCancelBtn fr">取消</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/bannerAbout.js"></script>
+  </body>
+</html>

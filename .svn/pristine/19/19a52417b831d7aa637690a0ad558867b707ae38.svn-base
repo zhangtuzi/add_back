@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>网厅banner配置</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bannerAbout.css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+  </head>
+  <body>
+      <div class="bannerHeaerDiv">
+        <ul class="headerUl">
+          <li onclick="window.location.href='llBbanner.html'">流量包专区banner广告</li>
+          <li onclick="window.location.href='G4banner.html'">特色专区banner广告</li>
+          <li class="active1" onclick="window.location.href='thbanner.html'">特惠专区banner广告</li>
+        </ul>
+      </div>
+      <img src="images/thBg.jpg" class="pageBg marginT47">
+      <div class="mc1"></div>
+      <div class="bannerWarp">
+        <div class="adSortBtn">广告排序</div>
+        <ul class="bannerUl1">
+          <li _ad_title="广告名称1" class="bannerBg1 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner1.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称2" class="bannerBg2 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner2.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称3" class="bannerBg3 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner3.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称4" class="bannerBg4 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner4.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称5" class="bannerBg5 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner1.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称6" class="bannerBg6 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner2.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称7" class="bannerBg7 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner3.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称8" class="bannerBg8 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner4.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称9" class="bannerBg9 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner1.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称10" class="bannerBg10 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner2.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称11" class="bannerBg11 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner3.jpg" class="bannerPic">
+          </li>
+          <li _ad_title="广告名称12" class="bannerBg12 unLocked">
+              <div class="editDiv1">
+                <img src="images/editIcon.png" class="editBanner">
+              </div>
+              <div class="bannerLockMc dn">
+                  <img src="images/lockedIcon3.png" class="bannerLockIcon">
+              </div>
+              <img src="images/banner4.jpg" class="bannerPic">
+          </li>
+        </ul>
+        <ul class="bannerCzUl">
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber showAll">1</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">2</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">3</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">4</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">5</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">6</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">7</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">8</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">9</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">10</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">11</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+          <li class="bannerIndexLi unLocked">
+            <div class="bannerIndexNumber">12</div>
+            <div class="bannerLockDiv" title="未锁定">
+                <img src="images/lockIcon.png" class="lockIcon dn">
+                <img src="images/unLockIcon.png" class="unLockIcon">
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- banner排序弹层 -->
+      <div class="bannerSortTc dn">
+        <div class="width1200">
+            <div class="bannerSortTit fl">Banner广告排序</div>
+            <div class="bannerSortSave fr">保存</div>
+            <div class="bannerReload" onclick="location.reload();">撤销</div>
+            <table class="bannerSortTable">
+              <tr>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg1">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg2">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg3">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg4">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg5">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg6">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg7">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg8">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg9">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg10">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg11">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+                <td class="unLocked">
+                  <div class="bannerLockMc dn">
+                      <img src="images/lockedIcon3.png" class="bannerLockIcon">
+                  </div>
+                  <div class="bannerSortPicDiv bannerSortBg12">
+                    <img src="images/banner1.jpg" class="bannerSortPic">
+                  </div>
+                  <div class="bannerAdTit">广告名称广告名称广告</div>
+                </td>
+              </tr>
+            </table>
+            <table class="bannerSortTableSave"></table>
+        </div>
+      </div>
+      <script type="text/javascript" src="js/bannerAbout.js"></script>
+      <script type="text/javascript" src="js/bannerDrag.js"></script>
+  </body>
+</html>

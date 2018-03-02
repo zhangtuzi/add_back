@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ECS统一后台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bannerAbout.css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+  </head>
+  <body>
+      <div class="warpDiv">
+        <ul class="headerUl">
+          <li class="active1">流量包专区banner广告</li>
+          <li>特色专区banner广告</li>
+          <li>特惠专区banner广告</li>
+        </ul>
+
+        <div class="adMessageCkDiv">
+          <table class="adMessageCkUl">
+            <tr>
+              <td colspan="2">
+                <img src="images/bannerPic1.jpg" class="adPicShow">
+              </td>
+            </tr>
+            <tr>
+              <td width="110">链接：</td>
+              <td>网厅4.0</td>
+            </tr>
+            <tr>
+              <td width="110">广告位：</td>
+              <td>首页banner广告位1</td>
+            </tr>
+            <tr>
+              <td width="110">广告名称：</td>
+              <td>广告名称广告名称广告名称广告名称</td>
+            </tr>
+            <tr>
+              <td width="110">链接地址：</td>
+              <td>http://4000test.10010.com:7112/login/login.action</td>
+            </tr>
+            <tr>
+              <td width="110">上线时间：</td>
+              <td>2012.12.12  12：12</td>
+            </tr>
+            <tr>
+              <td width="110">下线时间：</td>
+              <td>2012.12.12  12：12</td>
+            </tr>
+            <tr>
+              <td width="110">投放地域：</td>
+              <td>全国</td>
+            </tr>
+          </table>
+          <div class="adBtnDivBottom">
+              <div class="adBottomBtn fl adBjBtn">编辑</div>
+              <div class="adBottomBtn fr adBackBtn">返回</div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="js/bannerAbout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+$('.bannerCzUl').sortable({
+   containment: 'parent',
+  //  stop:function(event, ui){
+  //    alert(1);
+  //  }
+ });
+
+
+
+// banner轮播构造
+var banner={
+  // banner构造函数:参数说明：banner的ul的class
+  bannerGz:function(bannerUl){
+    var bannerUlLg=$('.'+bannerUl+'>li').length;
+    var bannerLiW=$('.'+bannerUl+'>li').width();
+    $('.'+bannerUl+'').width(bannerLiW*bannerUlLg);
+  },
+  // banner运行函数:参数说明：banner的ul的class和指定的banner运行到的index下标
+  bannerMove:function(bannerUl,bannerIndex){
+    $('.'+bannerUl+'').stop(true);
+    var bannerLiW=$('.'+bannerUl+'>li').width();
+    $('.'+bannerUl+'').animate({
+      'left':-bannerIndex*bannerLiW
+    },1000);
+  }
+}
+
+// banner构造
+banner.bannerGz('bannerUl1');
+// 点击下标，banner运行至相应的banner位置
+$('.bannerIndexNumber').click(function(){
+  $('.showAll').removeClass('showAll');
+  $(this).addClass('showAll');
+  var thisIndex=$(this).parent().index();
+  banner.bannerMove('bannerUl1',thisIndex);
+})
+
+// 锁定功能
+$('.bannerLockDiv').click(function(){
+  var thisIndex=$(this).parents('li').index();
+  var bannerLi=$('.bannerUl1>li').eq(thisIndex);
+  if($(this).hasClass('locked')){//如果锁定按钮已有含有锁定标志locked，则进行解锁并且去掉锁定标识
+      $(this).removeClass('locked');
+      $(this).attr('title','未锁定');
+      bannerLi.find('.editDiv1').removeClass('dn');
+      bannerLi.find('.bannerLockMc').addClass('dn');
+      $(this).find('.unLockIcon').removeClass('dn');
+      $(this).find('.lockIcon').addClass('dn');
+      $(this).next().removeClass('dn');
+      $(this).next().next().removeClass('dn');
+  }else{
+      $(this).addClass('locked');
+      $(this).attr('title','已锁定');
+      bannerLi.find('.editDiv1').addClass('dn');
+      bannerLi.find('.bannerLockMc').removeClass('dn');
+      $(this).find('.lockIcon').removeClass('dn');
+      $(this).find('.unLockIcon').addClass('dn');
+      $(this).next().addClass('dn');
+      $(this).next().next().addClass('dn');
+  }
+})

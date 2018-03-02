@@ -1,0 +1,147 @@
+var bannerAdArray=[];//定义排序前广告列表数组
+// 点击排序
+$('.adSortBtn').click(function(){
+  $(this).addClass('dn');
+  bannerSortWrite();
+  $('.bannerSortTc').removeClass('dn');
+  $('.bannerSortTable tr').sortable({
+     containment: 'parent',
+     cursor:'move',
+     //items: 'td:not(.locked)',//省份权限的加上，禁止锁定的拖动
+     start:function(event, ui){
+       bannerAdArray.splice(0,bannerAdArray.length);//将排序前广告列表数组清空
+       $('.bannerUl1>li').each(function(){//将排序前广告数据放入排序前广告列表数组中
+           var bannerAdObj={};
+           bannerAdObj.title=$(this).attr('_ad_title');//获取当前广告标题
+           bannerAdObj.imgUrl=$(this).find('.bannerPic').attr('src');//获取当前广告图片URL
+           bannerAdObj.isLock=$(this).hasClass('locked');//获取当前广告锁定状态
+           bannerAdArray.push(bannerAdObj);//将当前广告对象插入排序前广告列表数组
+       })
+     },
+     stop:function(event, ui){
+       var afterMoveIndex=$(ui.item).index();//获取移动的广告位在移动后下标
+       var bannerAfterMoveArrary=[];//获取排序后的广告列表原来的下标
+       $('.bannerSortTable td').each(function(){
+           var thisOldIndex=$(this).attr('_old_Index');//获取当前广告排序前的下标
+           bannerAfterMoveArrary.push(thisOldIndex);//将广告下标插入排序后的数组中
+       })
+       $('.bannerSortTable td').each(function(adIndex){
+          $(this).attr('_old_Index',adIndex);//将banner广告的序号重新记录到对应的td位置
+       })
+       //banner进行重新排序
+       for(var i=0;i<bannerAfterMoveArrary.length;i++){
+           var oldIndex=bannerAfterMoveArrary[i];//获取当前广告位原来的下标
+           var bannerAdCz=bannerAdArray[oldIndex];//查询排序前广告列表获取当前广告位放置的广告信息
+           var bannerLiDom=$('.bannerUl1>li').eq(i);//获取当前要操作的bannerLi
+           var bannerIndexLi=$('.bannerIndexLi>li').eq(i);//获取当前要操作的bannerLi对应的下标li
+           bannerLiDom.find('.bannerPic').attr('src',bannerAdCz.imgUrl);//将广告图片URL赋值
+           bannerLiDom.attr('_ad_title',bannerAdCz.title);//将广告名称赋值
+           if(bannerAdCz.isLock){//广告是否为锁定状态
+               bannerLiDom.addClass('locked');//给当前操作的bannerli添加锁定标识
+               bannerLiDom.find('.editDiv1').addClass('dn');//将当前操作的bannerli的编辑按钮隐藏
+               bannerLiDom.find('.bannerLockMc').removeClass('dn');//将当前操作的bannerli的锁定层显示
+               bannerIndexLi.find('.bannerLockDiv').attr('title','已锁定');//将banner锁定状态改为已锁定
+               bannerIndexLi.children().find('.lockIcon').removeClass('dn');//锁定按钮显示
+               bannerIndexLi.children().find('.unLockIcon').addClass('dn');//未锁定按钮隐藏
+           }else{
+               bannerLiDom.removeClass('locked');//给当前操作的bannerli添加锁定去掉
+               bannerLiDom.find('.editDiv1').removeClass('dn');//将当前操作的bannerli的编辑按钮显示
+               bannerLiDom.find('.bannerLockMc').addClass('dn');//将当前操作的bannerli的锁定层隐藏
+               bannerIndexLi.find('.bannerLockDiv').attr('title','未锁定');//将banner锁定状态改为未锁定
+               bannerIndexLi.children().find('.lockIcon').addClass('dn');//锁定按钮隐藏
+               bannerIndexLi.children().find('.unLockIcon').removeClass('dn');//未锁定按钮显示
+           }
+       }
+       //banner运行至相应位置
+       $('.showAll').removeClass('showAll');
+       $('.bannerIndexNumber').eq(afterMoveIndex).addClass('showAll');
+       banner.bannerMove('bannerUl1',afterMoveIndex);
+     }
+   });
+})
+//隐藏排序弹层
+$('.bannerSortSave').click(function(){
+  $('.adSortBtn').removeClass('dn');
+  $('.bannerSortTc').addClass('dn');
+})
+//将目前广告信息写入排序列表
+function bannerSortWrite(){
+  $('.bannerSortTable td').each(function(adIndex){
+      var curentAdLiObj=$('.bannerUl1>li').eq(adIndex);//获取当前序号广告对象
+      var curentAdLiTit=curentAdLiObj.attr('_ad_title');//获取当前广告标题
+      var curentAdLiImgUrl=curentAdLiObj.find('.bannerPic').attr('src');//获取当前广告图片URL
+      $(this).attr('_old_Index',adIndex);//将当前广告的序号记录到对应的td位置
+      if(curentAdLiObj.hasClass('locked')){//如果当前广告锁定，则对应排序的td也添加锁定标识
+        $(this).addClass('locked');
+      }
+      $(this).find('.bannerSortPic').attr('src',curentAdLiImgUrl);//将当前广告图片url赋值到排序对应位置
+      $(this).find('.bannerAdTit').text(curentAdLiTit);//将当前广告标题赋值到排序对应位置
+  })
+}
+
+// 点击排序列表，banner移动到相应位置
+$('.bannerSortTable td').click(function(){
+  $('.showAll').removeClass('showAll');
+  var thisIndex=$(this).index();
+  $('.bannerIndexNumber').eq(thisIndex).addClass('showAll');
+  banner.bannerMove('bannerUl1',thisIndex);
+})
+
+
+
+
+// banner轮播构造
+var banner={
+  // banner构造函数:参数说明：banner的ul的class
+  bannerGz:function(bannerUl){
+    var bannerUlLg=$('.'+bannerUl+'>li').length;
+    var bannerLiW=$('.'+bannerUl+'>li').width();
+    $('.'+bannerUl+'').width(bannerLiW*bannerUlLg);
+  },
+  // banner运行函数:参数说明：banner的ul的class和指定的banner运行到的index下标
+  bannerMove:function(bannerUl,bannerIndex){
+    $('.'+bannerUl+'').stop(true);
+    var bannerLiW=$('.'+bannerUl+'>li').width();
+    $('.'+bannerUl+'').animate({
+      'left':-bannerIndex*bannerLiW
+    },1000);
+  }
+}
+
+// banner构造
+banner.bannerGz('bannerUl1');
+// 点击下标，banner运行至相应的banner位置
+$('.bannerIndexNumber').click(function(){
+  $('.showAll').removeClass('showAll');
+  var thisIndex=$(this).parent().index();
+  $(this).addClass('showAll');
+  banner.bannerMove('bannerUl1',thisIndex);
+})
+
+// 锁定功能
+$('.bannerLockDiv').click(function(){
+  var thisIndex=$(this).parents('li').index();
+  $('.showAll').removeClass('showAll');
+  $(this).prev().addClass('showAll');
+  banner.bannerMove('bannerUl1',thisIndex);
+  var bannerLi=$('.bannerUl1>li').eq(thisIndex);
+  if($(this).hasClass('locked')){//如果锁定按钮已有含有锁定标志locked，则进行解锁并且去掉锁定标识
+    $(this).parents('.bannerIndexLi').removeClass('locked');
+      $(this).removeClass('locked');
+      $(this).attr('title','未锁定');
+      bannerLi.removeClass('locked');
+      bannerLi.find('.editDiv1').removeClass('dn');
+      bannerLi.find('.bannerLockMc').addClass('dn');
+      $(this).find('.unLockIcon').removeClass('dn');
+      $(this).find('.lockIcon').addClass('dn');
+  }else{
+    $(this).parents('.bannerIndexLi').addClass('locked');
+      $(this).addClass('locked');
+      $(this).attr('title','已锁定');
+      bannerLi.addClass('locked');
+      bannerLi.find('.editDiv1').addClass('dn');
+      bannerLi.find('.bannerLockMc').removeClass('dn');
+      $(this).find('.lockIcon').removeClass('dn');
+      $(this).find('.unLockIcon').addClass('dn');
+  }
+})

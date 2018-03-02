@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/colpick.css">
+    <link rel="stylesheet" href="css/bannerAbout.css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+  </head>
+  <body>
+      <div class="warpDiv">
+          <ul class="headerUl">
+            <li class="active1">流量包专区banner广告</li>
+            <li>特色专区banner广告</li>
+            <li>特惠专区banner广告</li>
+          </ul>
+          <p class="curentTit active1">流量包专区banner广告位1-排期</p>
+          <div class="bannerNewDiv">
+            <ul class="bannerAdUl">
+                <li>
+                  <span class="bannerAdItemTit fl">*广告名称</span>
+                  <div class="fl bannerAdItem">
+                      <input type="text" name="" class="bannerName_New newAdInput  fl">
+                  </div>
+                  <span class="clrDom"></span>
+                </li>
+                <li>
+                  <span class="bannerAdItemTit fl">*上传照片</span>
+                  <div class="fl bannerAdItem">
+                      <div class="picUploadBtn fl">上传图片</div>
+                      <span>格式：JPG,PNG；尺寸：2500*420 ,图片小于200K</span>
+                  </div>
+                  <span class="clrDom"></span>
+                </li>
+                <li class="bannerPicLi">
+                    <div class="bannerPicDiv" id="bannerPicDiv">
+                       <img src="images/bannerPic1.jpg" class="bannerPic2">
+                       <button id="tianjia_btn">添加水印</button>
+                       <div id="text_edit">
+                           <button id="wenben" style="width: 50px;height: 50px;">文本<br/>编辑</button>
+                           <button id="color" style="width: 50px;height: 50px;">背景<br/>颜色</button>
+                           <br/>
+                           <div id="export">
+                               <input id="export_input" type="text" maxlength="4">
+                               <button id="hide_btn" style="position: absolute;right:-40px;bottom:-21px;">隐藏</button>
+                               <div class="toBig">
+                                   <span>字体大小</span>
+                                   <select id="scale">
+                                       <option>1号字体</option>
+                                       <option>2号字体</option>
+                                       <option>3号字体</option>
+                                       <option>4号字体</option>
+                                       <option>5号字体</option>
+                                   </select>
+                                   <input type="button"  id="ziti_color"  value="字体颜色"/>
+                                   <input type="button"  id="queren"  value="确定"/>
+                                   <input type="button"  id="quxiao" value="取消"/>
+                               </div>
+                           </div>
+                         </div>
+                     </div>
+                </li>
+                <li>
+                  <span class="bannerAdItemTit fl">*链接地址</span>
+                  <div class="fl bannerAdItem">
+                      <input type="text" name="" class="bannerLinkUrl newAdInput fl">
+                  </div>
+                  <span class="clrDom"></span>
+                </li>
+                <li>
+                  <span class="bannerAdItemTit fl">*活动编码</span>
+                  <div class="fl bannerAdItem">
+                      <input type="text" name="" class="activeNumber newAdInput fl">
+                  </div>
+                  <span class="clrDom"></span>
+                </li>
+                <li>
+                  <span class="bannerAdItemTit fl">*上线时间</span>
+                  <div class="fl bannerAdItem">
+                      <input type="text" name="" class="startTimeEdite newAdInput fl">
+                  </div>
+                  <span class="clrDom"></span>
+                </li>
+                <li>
+                  <span class="bannerAdItemTit fl">*下线时间</span>
+                  <div class="fl bannerAdItem">
+                      <input type="text" name="" class="endTimeEdite newAdInput fl">
+                  </div>
+                  <span class="clrDom"></span>
+                </li>
+                <li>
+                  <span class="bannerAdItemTit fl">*登陆前是否展示</span>
+                  <div class="fl bannerAdItem">
+                      <select class="beforeLoginShow newAdInput fl" name="">
+                          <option value="true">是</option>
+                          <option value="false">否</option>
+                      </select>
+                  </div>
+                  <span class="clrDom"></span>
+                </li>
+                <li>
+                  <span class="bannerAdItemTit fl">*投放渠道</span>
+                  <div class="fl bannerAdItem">
+                      <select class="beforeLoginShow newAdInput fl" name="">
+                          <option value="online3">网厅3.0</option>
+                          <option value="phone5">手厅5.0</option>
+                      </select>
+                  </div>
+                  <span class="clrDom"></span>
+                </li>
+                <li>
+                  <span class="bannerAdItemTit fl">*投放地域</span>
+                  <div class="fl bannerAdItem paddingB0">
+                      <ul class="sfUl">
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="hunan" class="sfInput" value="湖南">
+                          <label for="hunan">湖南</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="liaoning" class="sfInput" value="辽宁">
+                          <label for="liaoning">辽宁</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="fujian" class="sfInput" value="福建">
+                          <label for="fujian">福建</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="shanxi1" class="sfInput" value="山西">
+                          <label for="shanxi1">山西</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="henan" class="sfInput" value="河南">
+                          <label for="henan">河南</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="jiangxi" class="sfInput" value="江西">
+                          <label for="jiangxi">江西</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="zhejiang" class="sfInput" value="浙江">
+                          <label for="zhejiang">浙江</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="qinghai" class="sfInput" value="青海">
+                          <label for="qinghai">青海</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="heilongjiang" class="sfInput" value="黑龙江">
+                          <label for="heilongjiang">黑龙江</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="guangxi" class="sfInput" value="广西">
+                          <label for="guangxi">广西</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="hubei" class="sfInput" value="湖北">
+                          <label for="hubei">湖北</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="tianjin" class="sfInput" value="天津">
+                          <label for="tianjin">天津</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="beijing" class="sfInput" value="北京">
+                          <label for="beijing">北京</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="shandong" class="sfInput" value="山东">
+                          <label for="shandong">山东</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="hebei" class="sfInput" value="河北">
+                          <label for="hebei">河北</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="jilin" class="sfInput" value="吉林">
+                          <label for="jilin">吉林</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="shanghai" class="sfInput" value="上海">
+                          <label for="shanghai">上海</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="hainan" class="sfInput" value="海南">
+                          <label for="hainan">海南</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="anhui" class="sfInput" value="安徽">
+                          <label for="anhui">安徽</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="guangdong" class="sfInput" value="广东">
+                          <label for="guangdong">广东</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="xizang" class="sfInput" value="西藏">
+                          <label for="xizang">西藏</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="gansu" class="sfInput" value="甘肃">
+                          <label for="gansu">甘肃</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="yunnan" class="sfInput" value="云南">
+                          <label for="yunnan">云南</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="guizhou" class="sfInput" value="贵州">
+                          <label for="guizhou">贵州</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="chongqing" class="sfInput" value="重庆">
+                          <label for="chongqing">重庆</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="sichuan" class="sfInput" value="四川">
+                          <label for="sichuan">四川</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="ningxia" class="sfInput" value="宁夏">
+                          <label for="ningxia">宁夏</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="xinjiang" class="sfInput" value="新疆">
+                          <label for="xinjiang">新疆</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="jiangsu" class="sfInput" value="江苏">
+                          <label for="jiangsu">江苏</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="neimenggu" class="sfInput" value="内蒙古">
+                          <label for="neimenggu">内蒙古</label>
+                        </li>
+                        <li class="sfList">
+                          <input type="checkbox" name="adArea" id="shanxi2" class="sfInput" value="陕西">
+                          <label for="shanxi2">陕西</label>
+                        </li>
+                        <span class="clrDom"></span>
+                      </ul>
+                  </div>
+                  <span class="clrAreaSelect SelectCzBtn fr">清空</span>
+                  <span class="AreaSelectAll SelectCzBtn fr marginR20">全选</span>
+                  <span class="clrDom"></span>
+                </li>
+                <li class="paddingT20">
+                  <span class="bannerAdItemTit fl">*套餐产品</span>
+                  <div class="fl bannerAdItem paddingB0">
+                      <ul class="newAdItemUl1 taocanUl">
+                        <li>
+                          <input type="checkbox" name="taocan" class="taocanInput taocanProduct" id="taocan1">
+                          <label for="taocan1">套餐套餐套餐</label>
+                        </li>
+                      </ul>
+                  </div>
+                  <span class="clrTaocanSelect SelectCzBtn fr">清空</span>
+                  <span class="TaocanSelectAll SelectCzBtn fr marginR20">全选</span>
+                  <span class="clrDom"></span>
+                </li>
+                <li class="paddingT20">
+                  <span class="bannerAdItemTit fl">*2I产品</span>
+                  <div class="fl bannerAdItem paddingB0">
+                      <ul class="newAdItemUl1 2IcaotanUl">
+                        <li>
+                          <input type="checkbox" name="taocan" class="taocanInput taocan2IProduct" id="taocan1_1">
+                          <label for="taocan1_1">套餐1</label>
+                        </li>
+                      </ul>
+                  </div>
+                  <span class="clr2ISelect SelectCzBtn fr">清空</span>
+                  <span class="2ISelectAll SelectCzBtn fr marginR20">全选</span>
+                  <span class="clrDom"></span>
+                </li>
+            </ul>
+            <div class="adBtnDivBottom marginT18">
+                <div class="adBottomBtn fl submitBtn">提交</div>
+                <div class="adBottomBtn fr adBackBtn">返回</div>
+            </div>
+          </div>
+      </div>
+      <script type="text/javascript" src="js/colpick.js"></script>
+      <script type="text/javascript" src="js/addPicMc.js"></script>
+      <script type="text/javascript" src="js/bannerAbout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ECS统一后台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bannerAbout.css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+  </head>
+  <body>
+      <div class="warpDiv">
+        <ul class="headerUl">
+          <li class="active1">流量包专区banner广告</li>
+          <li>特色专区banner广告</li>
+          <li>特惠专区banner广告</li>
+        </ul>
+        <p class="curentTit active1">流量包专区banner广告位1-排期</p>
+        <div class="adDiv1">
+            <span class="fl">广告名称</span>
+            <input type="text" name="" class="adName1 fl">
+            <span class="fl">状态</span>
+            <select class="adState fl" name="">
+                <option value="全部">全部</option>
+                <option value="草稿">草稿</option>
+                <option value="审核中">审核中</option>
+                <option value="审核未通过">审核未通过</option>
+                <option value="未上线">未上线</option>
+                <option value="已上线">正上线</option>
+                <option value="已下线">已下线</option>
+            </select>
+            <div class="newAdBtn">新建</div>
+        </div>
+
+        <ul class="adList">
+          <li>
+              <div class="adIndex">1</div>
+              <div class="adMessageDiv">
+                  <img src="images/bannerPic2.jpg" class="adPic1 fl">
+                  <div class="adTit1 fr">文本文本文本文本文本文本文本文本文本文本文本</div>
+                  <span class="adState1 fr">正上线</span>
+                  <p class="adCzTime marginT10">上线时间：<span class="showTime">2017.22.22  22:22</span></p>
+                  <p class="adCzTime">下线时间：<span class="hideTime">2017.22.22  22:22</span></p>
+              </div>
+              <div class="adCzBtnDiv">
+                  <div class="adDelBtn adCzBtns">删除</div>
+                  <div class="adCkBtn adCzBtns">查看</div>
+                  <div class="adBjBtn  adCzBtns">编辑</div>
+                  <div class="adFbBtn  adCzBtns">发布</div>
+              </div>
+          </li>
+          <li>
+              <div class="adIndex">2</div>
+              <div class="adMessageDiv">
+                  <img src="images/bannerPic2.jpg" class="adPic1 fl">
+                  <div class="adTit1 fr">文本文本文本文本文本文本文本文本文本文本文本</div>
+                  <span class="adState1 fr">已下线</span>
+                  <p class="adCzTime marginT10">上线时间：<span class="showTime">2017.22.22  22:22</span></p>
+                  <p class="adCzTime">下线时间：<span class="hideTime">2017.22.22  22:22</span></p>
+              </div>
+              <div class="adCzBtnDiv">
+                  <div class="adDelBtn adCzBtns">删除</div>
+                  <div class="adCkBtn adCzBtns">查看</div>
+                  <div class="adBjBtn  adCzBtns">编辑</div>
+                  <div class="adFbBtn  adCzBtns">发布</div>
+              </div>
+          </li>
+          <li class="marginR0">
+              <div class="adIndex">3</div>
+              <div class="adMessageDiv">
+                  <img src="images/bannerPic2.jpg" class="adPic1 fl">
+                  <div class="adTit1 fr">文本文本文本文本文本文本文本文本文本文本文本</div>
+                  <span class="adState1 fr">草稿</span>
+                  <p class="adCzTime marginT10">上线时间：<span class="showTime">2017.22.22  22:22</span></p>
+                  <p class="adCzTime">下线时间：<span class="hideTime">2017.22.22  22:22</span></p>
+              </div>
+              <div class="adCzBtnDiv">
+                  <div class="adDelBtn adCzBtns">删除</div>
+                  <div class="adCkBtn adCzBtns">查看</div>
+                  <div class="adBjBtn  adCzBtns">编辑</div>
+                  <div class="adFbBtn  adCzBtns">发布</div>
+              </div>
+          </li>
+          <li>
+              <div class="adIndex">4</div>
+              <div class="adMessageDiv">
+                  <img src="images/bannerPic2.jpg" class="adPic1 fl">
+                  <div class="adTit1 fr">文本文本文本文本文本文本文本文本文本文本文本</div>
+                  <span class="adState1 fr">待上线</span>
+                  <p class="adCzTime marginT10">上线时间：<span class="showTime">2017.22.22  22:22</span></p>
+                  <p class="adCzTime">下线时间：<span class="hideTime">2017.22.22  22:22</span></p>
+              </div>
+              <div class="adCzBtnDiv">
+                  <div class="adDelBtn adCzBtns">删除</div>
+                  <div class="adCkBtn adCzBtns">查看</div>
+                  <div class="adBjBtn  adCzBtns">编辑</div>
+                  <div class="adFbBtn  adCzBtns">发布</div>
+              </div>
+          </li>
+          <li>
+              <div class="adIndex">5</div>
+              <div class="adMessageDiv">
+                  <img src="images/bannerPic2.jpg" class="adPic1 fl">
+                  <div class="adTit1 fr">文本文本文本文本文本文本文本文本文本文本文本</div>
+                  <span class="adState1 fr">审核中</span>
+                  <p class="adCzTime marginT10">上线时间：<span class="showTime">2017.22.22  22:22</span></p>
+                  <p class="adCzTime">下线时间：<span class="hideTime">2017.22.22  22:22</span></p>
+              </div>
+              <div class="adCzBtnDiv">
+                  <div class="adDelBtn adCzBtns">删除</div>
+                  <div class="adCkBtn adCzBtns">查看</div>
+                  <div class="adBjBtn  adCzBtns">编辑</div>
+                  <div class="adFbBtn  adCzBtns">发布</div>
+              </div>
+          </li>
+          <li class="marginR0">
+              <div class="adIndex">6</div>
+              <div class="adMessageDiv">
+                  <img src="images/bannerPic2.jpg" class="adPic1 fl">
+                  <div class="adTit1 fr">文本文本文本文本文本文本文本文本文本文本文本</div>
+                  <span class="adState1 fr">已下线</span>
+                  <p class="adCzTime marginT10">上线时间：<span class="showTime">2017.22.22  22:22</span></p>
+                  <p class="adCzTime">下线时间：<span class="hideTime">2017.22.22  22:22</span></p>
+              </div>
+              <div class="adCzBtnDiv">
+                  <div class="adDelBtn adCzBtns">删除</div>
+                  <div class="adCkBtn adCzBtns">查看</div>
+                  <div class="adBjBtn  adCzBtns">编辑</div>
+                  <div class="adFbBtn  adCzBtns">发布</div>
+              </div>
+          </li>
+          <li>
+              <div class="adIndex">7</div>
+              <div class="adMessageDiv">
+                  <img src="images/bannerPic2.jpg" class="adPic1 fl">
+                  <div class="adTit1 fr">文本文本文本文本文本文本文本文本文本文本文本</div>
+                  <span class="adState1 fr">正上线</span>
+                  <p class="adCzTime marginT10">上线时间：<span class="showTime">2017.22.22  22:22</span></p>
+                  <p class="adCzTime">下线时间：<span class="hideTime">2017.22.22  22:22</span></p>
+              </div>
+              <div class="adCzBtnDiv">
+                  <div class="adDelBtn adCzBtns">删除</div>
+                  <div class="adCkBtn adCzBtns">查看</div>
+                  <div class="adBjBtn  adCzBtns">编辑</div>
+                  <div class="adFbBtn  adCzBtns">发布</div>
+              </div>
+          </li>
+          <li>
+              <div class="adIndex">8</div>
+              <div class="adMessageDiv">
+                  <img src="images/bannerPic2.jpg" class="adPic1 fl">
+                  <div class="adTit1 fr">文本文本文本文本文本文本文本文本文本文本文本</div>
+                  <span class="adState1 fr">正上线</span>
+                  <p class="adCzTime marginT10">上线时间：<span class="showTime">2017.22.22  22:22</span></p>
+                  <p class="adCzTime">下线时间：<span class="hideTime">2017.22.22  22:22</span></p>
+              </div>
+              <div class="adCzBtnDiv">
+                  <div class="adDelBtn adCzBtns">删除</div>
+                  <div class="adCkBtn adCzBtns">查看</div>
+                  <div class="adBjBtn  adCzBtns">编辑</div>
+                  <div class="adFbBtn  adCzBtns">发布</div>
+              </div>
+          </li>
+          <li class="marginR0">
+              <div class="adIndex">9</div>
+              <div class="adMessageDiv">
+                  <img src="images/bannerPic2.jpg" class="adPic1 fl">
+                  <div class="adTit1 fr">文本文本文本文本文本文本文本文本文本文本文本</div>
+                  <span class="adState1 fr">正上线</span>
+                  <p class="adCzTime marginT10">上线时间：<span class="showTime">2017.22.22  22:22</span></p>
+                  <p class="adCzTime">下线时间：<span class="hideTime">2017.22.22  22:22</span></p>
+              </div>
+              <div class="adCzBtnDiv">
+                  <div class="adDelBtn adCzBtns">删除</div>
+                  <div class="adCkBtn adCzBtns">查看</div>
+                  <div class="adBjBtn  adCzBtns">编辑</div>
+                  <div class="adFbBtn  adCzBtns">发布</div>
+              </div>
+          </li>
+        </ul>
+        <div class="pageWarpDiv">
+            <div class="pageChange fr">跳转</div>
+            <input type="text" class="pageNumberInput fr" value="">
+            <span class="fr">跳转至</span>
+            <span class="fr marginR20">共<span class="pageAllNum">9</span>页</span>
+            <img src="images/rightIcon1.png" class="pageNumRight fr">
+            <span class="fr pageNum">5</span>
+            <span class="fr pageNum">4</span>
+            <span class="fr pageNum">3</span>
+            <span class="fr pageNum">2</span>
+            <span class="fr pageNum pageNumActive">1</span>
+            <img src="images/leftIcon2.png" class="pageNumLeft fr">
+            <select class="pageGroupSelect fr">
+                <option value="9">9</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+            </select>
+            <span class="fr marginR5">每页显示</span>
+            <span class="fr marginR30">共<span class="adListNum">90</span>条</span>
+        </div>
+      </div>
+
+      <div class="bgMc"></div>
+
+      <!-- 重置时间弹层 -->
+      <div class="setTimeDiv">
+          <p class="tcTit">重置上下线时间</p>
+          <ul class="setTimeUl">
+            <li>
+              <span class="fl tcTit2">*上线时间</span>
+              <input type="text" class="startTime setTimeInput fl" value="">
+            </li>
+            <li>
+              <span class="fl tcTit2">*下线时间</span>
+              <input type="text" class="endTime setTimeInput fl" value="">
+            </li>
+          </ul>
+          <div class="tcBtnDiv">
+              <div class="confirmBtn fl tcBtn1">确定</div>
+              <div class="cancelBtn fr tcBtn1">取消</div>
+          </div>
+      </div>
+
+      <!-- 删除弹层 -->
+      <div class="bannerAdTc1">
+          <p class="bannerAdTcTip1">是否确认删除广告？</p>
+          <div class="bannerAdTcBtnDiv">
+              <div class="bannerAdTcBtn delBannerAd fl">确认</div>
+              <div class="bannerAdTcBtn delBannerAdCancel fr">取消</div>
+          </div>
+      </div>
+      <script type="text/javascript" src="js/bannerAbout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,319 @@
+// 页面跳转
+$('.adBjBtn,.floorAdEdite,.bannerUl1>li').click(function(){
+  window.location.href='newBannerAd.html';
+})
+$('.adBackBtn').click(function(){
+  window.history.go(-1);
+})
+$('.adCkBtn').click(function(){
+  window.location.href='bannerAdCk.html';
+})
+
+
+
+//banner操作按钮显示
+$('.bannerIndexNumber').mouseover(function(){
+  $('.showAll').removeClass('showAll');
+  $(this).addClass('showAll');
+  $(this).parent().siblings().find('.leftMoveBanner,.rightMoveBanner').hide();
+  $(this).siblings().show();
+})
+// banner操作按钮消失
+$(window).mouseover(function(e){
+  var eClass=$(e.target);
+  var outNumber=$(this).text();
+  if(eClass.parents().hasClass('bannerIndexLi')){
+    $(this).parents('.bannerIndexLi').find('.leftMoveBanner,.rightMoveBanner').show();
+  }else if(eClass.hasClass('bannerIndexLi')){
+    $(this).find('.leftMoveBanner,.rightMoveBanner').show();
+  }else{
+    $('.showAll').removeClass('showAll');
+    $('.leftMoveBanner,.rightMoveBanner').hide();
+  }
+})
+
+// banner轮播构造
+var banner={
+  // banner构造函数:参数说明：banner的ul的class
+  bannerGz:function(bannerUl){
+    var bannerUlLg=$('.'+bannerUl+'>li').length;
+    var bannerLiW=$('.'+bannerUl+'>li').width();
+    $('.'+bannerUl+'').width(bannerLiW*bannerUlLg);
+  },
+  // banner运行函数:参数说明：banner的ul的class和指定的banner运行到的index下标
+  bannerMove:function(bannerUl,bannerIndex){
+    $('.'+bannerUl+'').stop(true);
+    var bannerLiW=$('.'+bannerUl+'>li').width();
+    $('.'+bannerUl+'').animate({
+      'left':-bannerIndex*bannerLiW
+    },1000);
+  }
+}
+
+// banner构造
+banner.bannerGz('bannerUl1');
+// 点击下标，banner运行至相应的banner位置
+$('.bannerIndexNumber').click(function(){
+  $('.showAll').removeClass('showAll');
+  $(this).addClass('showAll');
+  var thisIndex=$(this).parent().index();
+  banner.bannerMove('bannerUl1',thisIndex);
+})
+
+// 锁定功能
+$('.bannerLockDiv').click(function(){
+  if($(this).hasClass('locked')){//如果锁定按钮已有含有锁定标志locked，则进行解锁并且去掉锁定标识
+      $(this).removeClass('locked');
+      $(this).attr('title','未锁定');
+      $(this).find('.unLockIcon').removeClass('dn');
+      $(this).find('.lockIcon').addClass('dn');
+      $(this).next().removeClass('dn');
+      $(this).next().next().removeClass('dn');
+  }else{
+      $(this).addClass('locked');
+      $(this).attr('title','已锁定');
+      $(this).find('.lockIcon').removeClass('dn');
+      $(this).find('.unLockIcon').addClass('dn');
+      $(this).next().addClass('dn');
+      $(this).next().next().addClass('dn');
+  }
+})
+
+
+// 右移功能
+$('.bannerCzUl').delegate('.rightMoveBanner','click',function(){
+    var moveCurentIndex=$(this).parent().index();//获取当前需要移动的banner的下标
+    var maxLg=$('.bannerCzUl>li').length;//获取banner的数量
+    var bannerWidth=$('.bannerUl1>li').width();//获取banner的宽度
+    var moveFlag=true;//banner可移动
+    var targetIndex=moveCurentIndex+1;//获取目标下标
+    while(moveFlag){
+      if(targetIndex<maxLg){//下标在banner数量以内，才执行
+        var targetLi=$('.bannerCzUl>li').eq(targetIndex);//获取目标Li
+        if(targetLi.children().hasClass('locked')){//如果目标锁定，则查找下一个
+          targetIndex++;
+        }else{
+          $('.bannerUl1').animate({'left':-(targetIndex)*bannerWidth+'px'},1000);//banner运行至可以移动到的位置
+          var moveBannerCurentHtml=$('.bannerUl1>li').eq(moveCurentIndex).html();//获取需要移动的banner内容
+          var moveBannerTargetHtml=$('.bannerUl1>li').eq(targetIndex).html();//获取目标位置的banner内容
+          var moveSaveHtml=moveBannerCurentHtml;//将需要移动banner内容存储在moveSaveHtml变量中
+          $('.bannerUl1>li').eq(moveCurentIndex).html(moveBannerTargetHtml);//将目标位置的banner内容放在需要移动的banner的现在位置上
+          $('.bannerUl1>li').eq(targetIndex).html(moveSaveHtml);//将存储的需要移动的banner内容放入目标位置
+          $('.leftMoveBanner,.rightMoveBanner').hide();
+          $('.showAll').removeClass('showAll');
+          $('.bannerIndexNumber').removeClass('showAll1');
+          $('.bannerCzUl>li').eq(targetIndex).find('.bannerIndexNumber').addClass('showAll1');
+          moveFlag=false;
+        }
+      }else{
+        moveFlag=false;
+      }
+    }
+})
+
+// 左移功能
+$('.bannerCzUl').delegate('.leftMoveBanner','click',function(){
+    var moveCurentIndex=$(this).parent().index();//获取当前需要移动的banner的下标
+    var maxLg=$('.bannerCzUl>li').length;//获取banner的数量
+    var bannerWidth=$('.bannerUl1>li').width();//获取banner的宽度
+    var moveFlag=true;//banner可移动
+    var targetIndex=moveCurentIndex-1;//获取目标下标
+    while(moveFlag){
+      if(targetIndex>-1){//下标在banner数量以内，才执行
+        var targetLi=$('.bannerCzUl>li').eq(targetIndex);//获取目标Li
+        if(targetLi.children().hasClass('locked')){//如果目标锁定，则查找下一个
+          targetIndex--;
+        }else{
+          $('.bannerUl1').animate({'left':-(targetIndex)*bannerWidth+'px'},1000);//banner运行至可以移动到的位置
+          var moveBannerCurentHtml=$('.bannerUl1>li').eq(moveCurentIndex).html();//获取需要移动的banner内容
+          var moveBannerTargetHtml=$('.bannerUl1>li').eq(targetIndex).html();//获取目标位置的banner内容
+          var moveSaveHtml=moveBannerCurentHtml;//将需要移动banner内容存储在moveSaveHtml变量中
+          $('.bannerUl1>li').eq(moveCurentIndex).html(moveBannerTargetHtml);//将目标位置的banner内容放在需要移动的banner的现在位置上
+          $('.bannerUl1>li').eq(targetIndex).html(moveSaveHtml);//将存储的需要移动的banner内容放入目标位置
+          $('.leftMoveBanner,.rightMoveBanner').hide();
+          $('.showAll').removeClass('showAll');
+          $('.bannerIndexNumber').removeClass('showAll1');
+          $('.bannerCzUl>li').eq(targetIndex).find('.bannerIndexNumber').addClass('showAll1');
+          moveFlag=false;
+        }
+      }else{
+        moveFlag=false;
+      }
+    }
+})
+
+// 新建广告页面发布区域全选
+$('.AreaSelectAll').click(function(){
+    $('.sfInput').prop('checked','checked');
+})
+// 新建广告页面发布区域选中清空
+$('.clrAreaSelect').click(function(){
+    $('.sfInput').removeProp('checked');
+})
+
+// banner广告排期页面重置发布时间
+$('.adList').delegate('.adFbBtn','click',function(){
+    $(this).parents('li').addClass('adListCzDom');//给当前操作的排期广告添加标识
+    $('.bgMc,.setTimeDiv').show();
+})
+
+$('.confirmBtn,.cancelBtn').click(function(){
+    $('.adListCzDom').removeClass('adListCzDom');//去掉广告排期操作的标识
+    $('.bgMc,.setTimeDiv').hide();
+})
+
+// 排期banner广告删除
+$('.adList').delegate('.adDelBtn','click',function(){
+    $(this).parents('li').addClass('adListCzDom');//给当前操作的排期广告添加标识
+    $('.bgMc,.bannerAdTc1').show();
+})
+//排期广告删除确认
+$('.delBannerAd').click(function(){
+  $('.adListCzDom').remove();//将当前操作的排期广告删除
+  $('.bgMc,.bannerAdTc1').hide();
+  $('.adList>li').removeClass('marginR0');
+  for(var i=0;i<$('.adList>li').length;i++){
+    $('.adList>li').eq(i).find('.adIndex').text(i+1);
+    if(i%3==2){
+      $('.adList>li').eq(i).addClass('marginR0');
+    }
+  }
+})
+
+//排期广告删除取消
+$('.delBannerAdCancel').click(function(){
+  $('.adListCzDom').remove('adListCzDom');//操作排期广告的标识去掉
+  $('.bgMc,.bannerAdTc1').hide();
+})
+
+
+
+// 楼层广告展示页面
+$(function(){
+  // 页面加载完成后，获取当前楼层广告区域的高度，将高度赋值给下面填充区域，使底部内容展示出来
+  var floorAdContenH=$('.floorAdWarp').height();
+  $('.bannerDivShade').height(floorAdContenH);
+})
+
+var floorAdLiTemplate='';//楼层广告模板
+floorAdLiTemplate+='<li class="floorAdLi"><img src="images/thProPic1.jpg" class="floorAdPic">';
+floorAdLiTemplate+='<div class="floorAdMc dn"></div><div class="floorActiveDiv"></div>';
+floorAdLiTemplate+='<img src="images/lockedIcon3.png" class="floorAdLockShow dn" title="已锁定">';
+floorAdLiTemplate+='<img src="images/closeIcon2.png" class="floorAdDelIcon"><div class="floorAdCzDiv">';
+floorAdLiTemplate+='<table class="floorAdCz" cellspacing="5" border-collapse="inherit"><tr class="floorAdUp"';
+floorAdLiTemplate+=' title="上移"><td><img src="images/upMoveIcon2.png" class="floorAdCzBtn"></td></tr>';
+floorAdLiTemplate+='<tr class="floorAdEdite" title="编辑"><td><img src="images/editIcon2.png" class="floorAdCzBtn">';
+floorAdLiTemplate+='</td></tr><tr class="floorAdLocked" title="锁定"><td><img src="images/lockIcon2.png"';
+floorAdLiTemplate+='  class="floorAdCzBtn"></td></tr><tr class="floorAdUnLock dn" title="解锁"><td>';
+floorAdLiTemplate+='<img src="images/unLockIcon2.png" class="floorAdCzBtn"></td></tr>';
+floorAdLiTemplate+='<tr class="floorAdDown" title="下移"><td><img src="images/downMoveIcon2.png"';
+floorAdLiTemplate+= 'class="floorAdCzBtn"></td></tr></table></div></li>';
+
+
+// 楼层广告位添加
+$('.floorAdAddBtn').click(function(){
+  $('.floorAdAddLi').before(floorAdLiTemplate);//插入楼层新的广告位
+  floorAdMoveBtnShow();//最上方的楼层广告上移按钮隐藏，最下方的楼层广告下移按钮隐藏
+  // 完成后，获取当前楼层广告区域的高度，将高度赋值给下面填充区域，使底部内容展示出来
+  var floorAdContenH=$('.floorAdWarp').height();
+  $('.bannerDivShade').height(floorAdContenH);
+})
+
+floorAdMoveBtnShow();//最上方的楼层广告上移按钮隐藏，最下方的楼层广告下移按钮隐藏
+
+// 楼层广告位解锁
+$('.floorAdWarp').delegate('.floorAdUnLock','click',function(){
+    $(this).addClass('dn');//解锁按钮隐藏
+    var thisPLi=$(this).parents('li');//获取当前楼层广告位li
+    thisPLi.removeClass('floorLocked');//当前楼层广告位去掉锁定标识
+    thisPLi.children().find('.floorAdLocked').removeClass('dn');//当前广告位右侧锁定操作按钮显示
+    thisPLi.find('.floorAdMc').addClass('dn');//当前广告位去掉蒙层
+    thisPLi.find('.floorAdLockShow').addClass('dn');//当前广告位锁定标识消失
+})
+//楼层广告位锁定
+$('.floorAdWarp').delegate('.floorAdLocked','click',function(){
+    $(this).addClass('dn');//锁定按钮隐藏
+    var thisPLi=$(this).parents('li');//获取当前楼层广告位li
+    thisPLi.addClass('floorLocked');//当前楼层广告位添加锁定标识
+    thisPLi.children().find('.floorAdUnLock').removeClass('dn');//当前广告位右侧解锁操作按钮显示
+    thisPLi.find('.floorAdMc').removeClass('dn');//当前广告位添加蒙层
+    thisPLi.find('.floorAdLockShow').removeClass('dn');//当前广告位锁定标识显示
+})
+//楼层广告位删除
+$('.floorAdWarp').delegate('.floorAdDelIcon','click',function(){
+    var thisPLi=$(this).parents('li');//获取当前楼层广告位li
+    thisPLi.addClass('floorCzDom');//添加操作标识
+    $('.floorTc,.tcMc').show();
+})
+
+//楼层广告位上移
+$('.floorAdWarp').delegate('.floorAdUp','click',function(){
+    var thisPLi=$(this).parents('li');//获取当前楼层广告位li
+    var thisPLiIndex=thisPLi.index();//获取当前楼层广告位的下标
+    var targetPLiIndex=thisPLiIndex-1;//获取目标楼层广告位li的下标
+    var moveFlag=true;//定义可移动标识
+    while (moveFlag) {
+        if(targetPLiIndex>-1){//0为最上方一个楼层
+          var targetLi=$('.floorAdUl>li').eq(targetPLiIndex);//获取目标Li
+            if(targetLi.hasClass('floorLocked')){//如果目标楼层广告位含有锁定标识，则查找上一个
+                targetPLiIndex--;
+            }else{
+              var moveBannerCurentHtml=$('.floorAdUl>li').eq(thisPLiIndex).html();//获取需要移动的楼层广告位内容
+              var moveBannerTargetHtml=$('.floorAdUl>li').eq(targetPLiIndex).html();//获取目标位置的楼层广告位内容
+              var moveSaveHtml=moveBannerCurentHtml;//将需要移动楼层广告位内容存储在moveSaveHtml变量中
+              $('.floorAdUl>li').eq(thisPLiIndex).html(moveBannerTargetHtml);//将目标位置的楼层广告位内容放在需要移动的banner的现在位置上
+              $('.floorAdUl>li').eq(targetPLiIndex).html(moveSaveHtml);//将存储的需要移动的楼层广告位内容放入目标位置
+              moveFlag=false;
+              floorAdMoveBtnShow();
+            }
+        }else{
+          moveFlag=false;
+        }
+    }
+})
+
+//楼层广告位上移
+$('.floorAdWarp').delegate('.floorAdDown','click',function(){
+    var thisPLi=$(this).parents('li');//获取当前楼层广告位li
+    var thisPLiIndex=thisPLi.index();//获取当前楼层广告位的下标
+    var targetPLiIndex=thisPLiIndex+1;//获取目标楼层广告位li的下标
+    var moveFlag=true;//定义可移动标识
+    while (moveFlag) {
+        if(targetPLiIndex<$('.floorAdUl>li').length-1){//0为最上方一个楼层
+          var targetLi=$('.floorAdUl>li').eq(targetPLiIndex);//获取目标Li
+            if(targetLi.hasClass('floorLocked')){//如果目标楼层广告位含有锁定标识，则查找上一个
+                targetPLiIndex++;
+            }else{
+              var moveBannerCurentHtml=$('.floorAdUl>li').eq(thisPLiIndex).html();//获取需要移动的楼层广告位内容
+              var moveBannerTargetHtml=$('.floorAdUl>li').eq(targetPLiIndex).html();//获取目标位置的楼层广告位内容
+              var moveSaveHtml=moveBannerCurentHtml;//将需要移动楼层广告位内容存储在moveSaveHtml变量中
+              $('.floorAdUl>li').eq(thisPLiIndex).html(moveBannerTargetHtml);//将目标位置的楼层广告位内容放在需要移动的banner的现在位置上
+              $('.floorAdUl>li').eq(targetPLiIndex).html(moveSaveHtml);//将存储的需要移动的楼层广告位内容放入目标位置
+              moveFlag=false;
+              floorAdMoveBtnShow();
+            }
+        }else{
+          moveFlag=false;
+        }
+    }
+})
+
+
+//最上方的楼层广告上移按钮隐藏，最下方的楼层广告下移按钮隐藏
+function floorAdMoveBtnShow(){
+  $('.floorAdUp,.floorAdDown').removeClass('dn');//将所有的楼层移动按钮显示
+  $('.floorAdUl>li').first().children().find('.floorAdUp').addClass('dn');//最上方的楼层广告上移按钮隐藏
+  $('.floorAdUl>li').last().prev().children().find('.floorAdDown').addClass('dn');//最下方的楼层广告下移按钮隐藏
+}
+
+// 楼层广告删除弹层确认
+$('.delConfrimBtn').click(function(){
+  $('.floorCzDom').remove();
+  $('.floorTc,.tcMc').hide();
+  floorAdMoveBtnShow();
+})
+// 楼层广告删除取消
+$('.delCancelBtn').click(function(){
+  $('.floorCzDom').removeClass('floorCzDom');
+  $('.floorTc,.tcMc').hide();
+})

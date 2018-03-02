@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ECS统一后台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bannerAbout.css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+  </head>
+  <body>
+      <div class="warpDiv">
+        <ul class="headerUl">
+          <li class="active1">流量包专区banner广告</li>
+          <li>特色专区banner广告</li>
+          <li>特惠专区banner广告</li>
+        </ul>
+
+        <div class="adMessageCkDiv">
+          <ul class="adMessageCkUl">
+            <li class="adMessageCkLi">
+                <img src="images/bannerPic1.jpg" class="adPicShow">
+                <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">链接：</div>
+              <div class="adMessageCkItem">网厅4.0</div>
+              <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">广告位：</div>
+              <div class="adMessageCkItem">首页banner广告位1</div>
+              <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">广告名称：</div>
+              <div class="adMessageCkItem">广告名称广告名称广告名称广告名称</div>
+              <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">链接地址：</div>
+              <div class="adMessageCkItem">http://4000test.10010.com:7112/login/login.action</div>
+              <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">活动编码：</div>
+              <div class="adMessageCkItem">XXXXXXXXXX</div>
+              <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">上线时间：</div>
+              <div class="adMessageCkItem">2012.12.12  12：12</div>
+              <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">下线时间：</div>
+              <div class="adMessageCkItem">2012.12.12  12：12</div>
+              <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">登陆前是否展示：</div>
+              <div class="adMessageCkItem">是</div>
+              <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">投放地域：</div>
+              <div class="adMessageCkItem">全国</div>
+              <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">套餐产品：</div>
+              <div class="adMessageCkItem">套餐1套餐1套餐1套餐1套餐1，套餐1套餐1套餐1套餐1，套餐1套餐1套餐1套餐1，
+                套餐1套餐1套餐1，套餐1，套餐1，套餐1</div>
+                <div class="clrDom"></div>
+            </li>
+            <li class="adMessageCkLi">
+              <div class="adMessageCkItemTit">2I产品：</div>
+              <div class="adMessageCkItem">套餐1套餐1.0</div>
+              <div class="clrDom"></div>
+            </li>
+          </ul>
+          <div class="adBtnDivBottom">
+              <div class="adBottomBtn fl adBjBtn">编辑</div>
+              <div class="adBottomBtn fr adBackBtn">返回</div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="js/bannerAbout.js"></script>
+  </body>
+</html>
